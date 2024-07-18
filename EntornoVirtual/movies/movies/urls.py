@@ -16,7 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from core import views as core_views
+from django.conf import settings
+from tendencias import views as tendencias_views
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('',tendencias_views.index, name="home"),
 ]
