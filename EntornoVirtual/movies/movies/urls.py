@@ -24,4 +24,7 @@ from tendencias import views as tendencias_views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',tendencias_views.index, name="home"),
+    path('registrarse',core_views.registrarse, name="registrarse"),
+    path('login',core_views.login, name="login"),
+    path('',tendencias_views.detalle, name="detalle"),
 ]
