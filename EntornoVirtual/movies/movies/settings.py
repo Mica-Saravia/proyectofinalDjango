@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'jquery',
     'core',
-    'tendencias',
+    'pelicula',
+
     
 
 

@@ -18,13 +18,13 @@ from django.contrib import admin
 from django.urls import path
 from core import views as core_views
 from django.conf import settings
-from tendencias import views as tendencias_views
+from pelicula import views as pelicula_views
 
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('',tendencias_views.index, name="home"),
+    path('',pelicula_views.index, name="home"),
     path('registrarse',core_views.registrarse, name="registrarse"),
     path('login',core_views.login, name="login"),
-    path('',tendencias_views.detalle, name="detalle"),
+    path('',pelicula_views.detalle, name="detalle"),
 ]
