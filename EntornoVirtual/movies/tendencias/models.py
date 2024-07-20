@@ -4,11 +4,11 @@ from django.db import models
 
 class Pelicula(models.Model):
     titulo = models.CharField(max_length=200)
-    imagen = models.ImageField(upload_to="imagen")
-    datos = models.TextField()
+    imagen = models.ImageField(upload_to="imag")
+    fecha_lanzamiento = models.DateField(null=True, blank=True, verbose_name="Fecha de lanzamiento")
     director = models.TextField()
-    director2 = models.TextField()   
-    escritor = models.TextField()
+    genero = models.TextField()   
+    duracion = models.TextField()
 
     
     class Meta:
