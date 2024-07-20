@@ -17,8 +17,9 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from core import views as core_views
-from django.conf import settings
 from tendencias import views as tendencias_views
+from django.conf import settings
+
 
 
 urlpatterns = [
@@ -28,3 +29,7 @@ urlpatterns = [
     path('login',core_views.login, name="login"),
     path('',tendencias_views.detalle, name="detalle"),
 ]
+
+if settings.DEBUG:
+    from django.conf.urls.static import static
+    urlpatterns += static(settings.MEDIA_URL, document_root = settings.MEDIA_ROOT)
