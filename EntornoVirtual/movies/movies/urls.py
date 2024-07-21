@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
 from core import views as core_views
 from tendencias import views as tendencias_views
 from django.conf import settings
@@ -28,6 +28,7 @@ urlpatterns = [
     path('registrarse',core_views.registrarse, name="registrarse"),
     path('login',core_views.login, name="login"),
     path('',tendencias_views.detalle, name="detalle"),
+    path('', include("tendencias.urls")),
 ]
 
 if settings.DEBUG:

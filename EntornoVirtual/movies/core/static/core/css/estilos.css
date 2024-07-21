@@ -685,13 +685,13 @@ body{
     
     .detalle{
         padding-top:50px;
-        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/mario-bg.jpg");
+        background:linear-gradient(to right top, #6d6969a7, #6d6969a7),url("../assets/img/Fondo.jpg");
         background-size: cover;
         background-position: center;
-        height: 70vh;
+        height: 72vh;
         .contenedorDetalle{
             width:75%;
-            margin: 0 auto;
+            margin: 105px;
             display: flex;
             justify-content: center;
             align-items: center;
