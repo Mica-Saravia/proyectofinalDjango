@@ -10,7 +10,7 @@ class Pelicula(models.Model):
     genero = models.TextField()   
     duracion = models.TextField()
 
-    def _str_(self) :
+    def __str__(self) :
         return self.titulo
 
     class Meta:
