@@ -503,6 +503,11 @@ body{
     .aportes,.video{
         font-size: 14px;
     }
+    .aportes a{
+            color: #08b9ff; /* Esto hará que los enlaces hereden el color del texto padre */
+            text-decoration: none; /* Esto elimina el subrayado */
+        
+    }
 }
 /*ESTILOS FOOTER CELULAR Y TABLET CHICA*/
 @media (max-width: 768px) {
