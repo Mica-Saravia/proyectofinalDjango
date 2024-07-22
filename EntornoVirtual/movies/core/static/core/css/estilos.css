@@ -103,6 +103,7 @@ body{
     }
    
 }
+
 /*ESTILOS PARA HEADER MOBILE Y TABLET*/
 
 @media (max-width: 768px) {
@@ -530,6 +531,75 @@ body{
 
 
 /*ESTILOS ESCRITORIO PARA PAGINA Registrarse */
+
+/*ESTILOS HEADER PARA ESCRITORIO*/
+.headerRegistro{
+    color:#ffffff;
+    height: 10vh;
+    position:sticky;
+    top: 0;
+    z-index:10;
+    .navegacion{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-left:40px;
+        margin-right: 40px;
+        padding: 1.5rem 0;
+        transition: transform 0.3s ease;
+        .anclaLogo{
+            text-decoration: none;
+            color: #ffffff;
+            font-weight: 700;
+            font-size: 1.2rem;
+            transition: transform 0.3S ease;
+            /*animacion hover*/
+            &:hover{
+                animation: pulso 0.5s ease forwards;;
+            }
+        }
+        .listaNav{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            .listaItem{
+                margin-right:20px;
+                .linkNav{
+                    text-decoration: none;
+                    color:#ffffff;
+                    font-weight: 700;
+                    font-size: 1.1rem;
+                    padding: 0.5rem 1rem;
+                    /* Agregar efecto de botón presionado */
+                    transition: transform 0.3s, box-shadow 0.3s;
+                    &:hover {
+                        transform: scale(0.95);
+                        box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+                        border-radius: 5px;
+                    }
+                }
+                .linkNav.iniciarSesion{
+                    background-color: #181419;
+                    color: white;
+                    
+                    border-radius: 5px;
+                     /* Agregar efecto de botón presionado */
+                     transition: transform 0.3s, box-shadow 0.3s;
+                     &:hover {
+                         background-color: #9f3647;
+                        /* transform: scale(0.95);
+                         box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);*/
+                     }
+                }
+            }
+           
+        }
+    }
+   
+}
+
+
+
 .bodyRegistrarse{
     height: 100vh;
     background:linear-gradient(to right top, #24242473,#24242473),url("../assets/img/bg-register.jpg");
@@ -550,6 +620,7 @@ body{
             }
         }
     }
+    
     .main{
          /*seccion de registrarse.html*/
         .seccionRegistrarse{
