@@ -8,7 +8,7 @@ class Pelicula(models.Model):
     fecha_lanzamiento = models.DateField(null=True, blank=True, verbose_name="Fecha de lanzamiento")
     director = models.TextField()
     genero = models.TextField()   
-    duracion = models.TextField()
+    duracion = models.IntegerField()
 
     def __str__(self) :
         return self.titulo

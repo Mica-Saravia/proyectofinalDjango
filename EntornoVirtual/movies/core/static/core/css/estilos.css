@@ -502,6 +502,10 @@ body{
     }
     .aportes,.video{
         font-size: 14px;
+        display: flex;
+        width: 100%;
+        justify-content: center;   
+        
     }
     .aportes a{
             color: #08b9ff; /* Esto hará que los enlaces hereden el color del texto padre */
@@ -528,7 +532,20 @@ body{
                     padding: 0.5rem 0.8rem;
                 }
             }
-        }
+       
+         }
+        .aportes,.video{
+            font-size: 14px;
+            display: flex;
+            width: 100%;
+            justify-content: center;
+            }
+        .texto-aportes {
+            text-align: center;
+            max-width: 80%;
+            margin-top: 2%;
+        }   
+      
     }
 }
 
@@ -739,6 +756,7 @@ body{
             column-gap: 60px;
             img{
               border-radius: 20px;
+
             }
             .textoDetalle{
                 h1{
@@ -805,10 +823,11 @@ body{
 @media screen and (max-width:1200px){
     .mainDetalle{
         .detalle{
-            height: initial;
+            display: flex;
+            height: 100vh;
             .contenedorDetalle{
                 flex-direction: column;
-                row-gap: 20px;
+                row-gap: 20px;         
                 img{
                     width: 100%;
                     height: 300px;

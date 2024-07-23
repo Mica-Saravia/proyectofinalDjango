@@ -1,4 +1,5 @@
 {% extends "tendencias/base.html" %} 
+{% load custom_filters %}
 {% load static %}
 {% block content %} 
     <main id="mainDetalle" class="mainDetalle">
@@ -10,16 +11,16 @@
             <div class="textoDetalle">
                 <h1>{{ pelicula.titulo }}</h1>
                 {% if pelicula.fecha_lanzamiento %}
-                    <p>{{ pelicula.fecha_lanzamiento|date:"d/m/Y" }} • {{ pelicula.genero }} • {{ pelicula.duracion }}m</p>
+                    <p>{{ pelicula.fecha_lanzamiento|date:"d/m/Y" }} • {{ pelicula.genero }} •{{ pelicula.duracion|duration_format }}</p>
                 {% else %}
-                    <p>{{ pelicula.genero }} • {{ pelicula.duracion }}m</p>
+                    <p>{{ pelicula.genero }} •{{ pelicula.duracion|duration_format }}</p>
                 {% endif %}
                 <h2>Director</h2>
                 <p>{{ pelicula.director }}</p>
                 <h2>Género</h2>
                 <p>{{ pelicula.genero }}</p>
                 <h2>Duración</h2>
-                <p>{{ pelicula.duracion }}m</p>
+                <p>{{ pelicula.duracion|duration_format }}</p>
             </div>
         </div>
       </section>
